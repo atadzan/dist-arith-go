@@ -1,10 +1,8 @@
 package handler
 
-type Orchestrator interface {
-}
+type Orchestrator interface{}
 
-type orchestrator struct {
-}
+type orchestrator struct{}
 
 func NewOrchestratorHandler() Orchestrator {
 	return &orchestrator{}

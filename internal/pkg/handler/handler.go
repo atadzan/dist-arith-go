@@ -5,7 +5,8 @@ type Handler interface {
 	Orchestrator
 }
 
-type handler struct{}
+type handler struct {
+}
 
 func New() Handler {
 	return &handler{}
