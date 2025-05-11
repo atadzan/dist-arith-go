@@ -1,6 +1,6 @@
 run-orchestrator:
-	go run cmd/orchestrator.go --port=8090
+	JWT_SECRET=helloWorld go run cmd/orchestrator/main.go
 run-worker:
-	go run cmd/worker.go --orchestratorAddress=http://localhost:8090
-build:
-	GOOS=linux GOARCH=amd64 go build -o servly-api  ./cmd/main.go
+	go run cmd/worker/main.go
+generate-proto:
+	protoc --go_out=. --go-grpc_out=. pkg/grpc/calc.proto
